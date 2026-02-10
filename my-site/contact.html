@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Andrew Hicks | Free Audit & Project Inquiries</title>
+  <meta name="description" content="Get in touch with Andrew Hicks for a free website audit or to discuss web design, Excel automation, or data science projects. Based in Austin, TX.">
+  <meta name="author" content="Andrew Hicks">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact Andrew Hicks — Web Design, Automation & Data Science">
+  <meta property="og:description" content="Get in touch about web design, Excel automation, or Python data science projects. Free website audits available.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a href="#main" class="skip-nav">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <nav class="container nav-container" aria-label="Main navigation">
+      <a href="index.html" class="nav-logo">andrew<span class="logo-dot">.</span></a>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <div class="nav-cta">
+          <a href="contact.html" class="btn btn-primary">Free Audit</a>
+        </div>
+      </div>
+      <button class="nav-toggle" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <span class="section-label" data-reveal>Contact</span>
+        <h1 data-reveal="delay-1">Let's Talk About Your Project</h1>
+        <p data-reveal="delay-2">Whether you need a website, want to automate your spreadsheets, or have a data problem to solve — I'm all ears.</p>
+      </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section class="section" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- Contact Form -->
+          <div class="contact-form-wrapper" data-reveal>
+            <h3 id="contact-heading">Send Me a Message</h3>
+            <p>Fill out the form below and I'll get back to you within 24 hours. Include your website URL if you'd like a free audit.</p>
+
+            <form id="contact-form" novalidate>
+              <div class="form-group">
+                <label class="form-label" for="name">Your Name <span class="required">*</span></label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="John Smith" required autocomplete="name">
+                <div class="form-error" aria-live="polite">Please enter your name.</div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="email">Email Address <span class="required">*</span></label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="john@example.com" required autocomplete="email">
+                <div class="form-error" aria-live="polite">Please enter a valid email address.</div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="website">Your Website URL <span style="color: var(--text-muted); font-weight: 400;">(for free audit)</span></label>
+                <input type="url" id="website" name="website" class="form-input" placeholder="https://www.yourwebsite.com" autocomplete="url">
+                <div class="form-error" aria-live="polite"></div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="service">What Are You Interested In?</label>
+                <select id="service" name="service" class="form-select">
+                  <option value="" disabled selected>Select a service</option>
+                  <option value="free-audit">Free Website Audit</option>
+                  <option value="new-website">New Website Design & Build</option>
+                  <option value="redesign">Website Redesign</option>
+                  <option value="seo">SEO & Local Search</option>
+                  <option value="excel">Excel & Spreadsheet Automation</option>
+                  <option value="python">Python Automation & Data Science</option>
+                  <option value="other">Something Else</option>
+                </select>
+                <div class="form-error" aria-live="polite"></div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="message">Your Message <span class="required">*</span></label>
+                <textarea id="message" name="message" class="form-textarea" placeholder="Tell me about your business and what you're looking for..." required></textarea>
+                <div class="form-error" aria-live="polite">Please enter a message.</div>
+              </div>
+
+              <div class="form-submit">
+                <button type="submit" class="btn btn-primary">
+                  Send Message
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                </button>
+              </div>
+            </form>
+
+            <!-- Success Message -->
+            <div class="form-success" role="alert">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <h3>Message Sent!</h3>
+              <p>Thanks for reaching out. I'll review your message and get back to you within 24 hours. If you included your website URL, I'll start working on your free audit right away.</p>
+            </div>
+          </div>
+
+          <!-- Contact Info Sidebar -->
+          <div data-reveal="delay-1">
+            <div class="contact-info">
+              <h3>Other Ways to Reach Me</h3>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22 4 12 13 2 4"/></svg>
+                </div>
+                <div>
+                  <div class="contact-info-label">Email</div>
+                  <div class="contact-info-value"><a href="mailto:ahicks5.nd@gmail.com">ahicks5.nd@gmail.com</a></div>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <div class="contact-info-label">Location</div>
+                  <div class="contact-info-value">Austin, TX</div>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div>
+                  <div class="contact-info-label">Response Time</div>
+                  <div class="contact-info-value">Within 24 hours</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Free Audit Box -->
+            <div class="free-audit-box">
+              <h4>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 22px; height: 22px;"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="8" y1="14" x2="8" y2="10"/><line x1="11" y1="14" x2="11" y2="8"/><line x1="14" y1="14" x2="14" y2="11"/></svg>
+                Free Website Audit
+              </h4>
+              <p>Send me your website URL and I'll analyze it across design, SEO, content, and technical health — then send you a professional report showing exactly what's working and what's costing you customers.</p>
+              <p style="margin-top: var(--space-sm);"><strong>No strings attached.</strong> No sales pitch unless you want one. Just an honest assessment of where your website stands and what you could improve.</p>
+              <p style="margin-top: var(--space-sm); color: var(--text-muted); font-size: var(--fs-xs);">Just include your website URL in the form and select "Free Website Audit" from the dropdown.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">andrew<span class="logo-dot">.</span></a>
+          <p>Web design, Excel automation, and Python data science — technology that helps businesses work smarter and grow faster.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html#web-design">Web Design</a></li>
+            <li><a href="services.html#excel">Excel Automation</a></li>
+            <li><a href="services.html#python">Python & Data Science</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Get in Touch</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22 4 12 13 2 4"/></svg>
+            <a href="mailto:ahicks5.nd@gmail.com">ahicks5.nd@gmail.com</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Austin, TX</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2026</span> Andrew Hicks. All rights reserved.</p>
+        <p>Hand-coded with care. No templates. No bloat.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
