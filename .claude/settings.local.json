@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git fetch:*)",
+      "Bash(git push:*)",
+      "Bash(gh repo edit:*)",
+      "Bash(gh.exe repo edit:*)",
+      "Bash(where.exe:*)",
+      "Bash(git branch:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nMove site files from my-site/ to repo root\n\nFlattens directory structure so index.html and all site assets\nare at the repository root for easier hosting/deployment.\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(wc:*)"
+    ]
+  }
+}

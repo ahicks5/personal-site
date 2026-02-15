@@ -137,16 +137,31 @@
 
       if (!isValid) return;
 
-      // Simulate form submission
+      // Submit via Formspree
       var submitBtn = contactForm.querySelector('.form-submit .btn');
-      var originalText = submitBtn.textContent;
       submitBtn.textContent = 'Sending...';
       submitBtn.disabled = true;
 
-      setTimeout(function () {
-        contactForm.style.display = 'none';
-        formSuccess.classList.add('visible');
-      }, 1200);
+      var formData = new FormData(contactForm);
+
+      fetch(contactForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      }).then(function (response) {
+        if (response.ok) {
+          contactForm.style.display = 'none';
+          formSuccess.classList.add('visible');
+        } else {
+          submitBtn.textContent = 'Send Message';
+          submitBtn.disabled = false;
+          alert('Something went wrong. Please try again or email me directly at ahicks5.nd@gmail.com');
+        }
+      }).catch(function () {
+        submitBtn.textContent = 'Send Message';
+        submitBtn.disabled = false;
+        alert('Connection error. Please try again or email me directly at ahicks5.nd@gmail.com');
+      });
     });
 
     // Remove error on input
