@@ -4,25 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd8f6d85-fe14-45fe-837a-39203c3ed45e" name="Changes" comment="first">
-      <change afterPath="$PROJECT_DIR$/.claude/settings.local.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/business/brand-messaging.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/business/claude-ai-workflow.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/business/client-onboarding.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/business/execution-plan.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/business/marketing-plan.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/business/outreach-playbook.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/business/pricing-packages.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/services.html" afterDir="false" />
-    </list>
+    <list default="true" id="fd8f6d85-fe14-45fe-837a-39203c3ed45e" name="Changes" comment="first" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -123,7 +105,7 @@
       <option name="presentableId" value="Default" />
       <updated>1770689788714</updated>
       <workItem from="1770689789923" duration="6986000" />
-      <workItem from="1770997379248" duration="6352000" />
+      <workItem from="1770997379248" duration="7004000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <option name="closed" value="true" />
@@ -133,7 +115,23 @@
       <option name="project" value="LOCAL" />
       <updated>1770693768393</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="first">
+      <option name="closed" value="true" />
+      <created>1771186938935</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1771186938935</updated>
+    </task>
+    <task id="LOCAL-00003" summary="first">
+      <option name="closed" value="true" />
+      <created>1771187565519</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1771187565519</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
