@@ -4,14 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Moonlight Head Spa | Austin, TX — Japanese Head Spa & Scalp Therapy</title>
-  <meta name="description" content="Austin's premier Japanese & Vietnamese-inspired head spa. 5-star rated scalp therapy, sound healing, and holistic treatments. Book your escape today.">
+  <meta name="description" content="Austin's premier Japanese & Vietnamese-inspired head spa. 5-star rated scalp therapy, sound healing, and holistic treatments. Book your session today.">
   <meta name="keywords" content="head spa Austin, Japanese head spa, scalp therapy Austin TX, scalp massage, sound healing, holistic spa Austin">
   <meta property="og:title" content="Moonlight Head Spa | Austin, TX">
   <meta property="og:description" content="5-star Japanese & Vietnamese-inspired head spa in Austin. Scalp therapy, sound healing, chakra work, and deep relaxation.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://moonlightheadspa.glossgenius.com/">
   <meta property="og:locale" content="en_US">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌙</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#127769;</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -58,25 +61,23 @@
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
-      --midnight: #0c1222;
-      --deep-navy: #111a2e;
-      --navy: #162040;
-      --slate: #1e2d4d;
-      --gold: #c9a24e;
-      --gold-light: #dbb86a;
-      --gold-glow: rgba(201, 162, 78, 0.15);
-      --champagne: #f0e6d0;
-      --cream: #faf6ef;
-      --ivory: #fefcf8;
-      --text-light: #e8e4dc;
-      --text-muted: #9ea8b8;
-      --text-dark: #2a2a35;
-      --text-body: #4a4a55;
-      --border-light: rgba(201, 162, 78, 0.12);
-      --border-dark: rgba(255, 255, 255, 0.06);
-      --shadow-soft: 0 2px 20px rgba(0, 0, 0, 0.08);
-      --shadow-card: 0 4px 30px rgba(0, 0, 0, 0.06);
-      --shadow-gold: 0 4px 25px rgba(201, 162, 78, 0.2);
+      --bg-primary: #1B1D21;
+      --bg-secondary: #2C2E32;
+      --bg-card: #25272B;
+      --bg-elevated: #303236;
+      --lavender: #C9AFEB;
+      --coral: #E48C5C;
+      --gradient: linear-gradient(135deg, #C9AFEB, #E48C5C);
+      --gradient-subtle: linear-gradient(135deg, rgba(201, 175, 235, 0.12), rgba(228, 140, 92, 0.12));
+      --accent-glow: rgba(201, 175, 235, 0.15);
+      --text-primary: #FFFFFF;
+      --text-secondary: #9295A5;
+      --text-tertiary: #727587;
+      --text-dark: #1B1D21;
+      --border: rgba(255, 255, 255, 0.06);
+      --border-accent: rgba(201, 175, 235, 0.15);
+      --shadow-card: 0 4px 30px rgba(0, 0, 0, 0.2);
+      --shadow-glow: 0 4px 25px rgba(201, 175, 235, 0.15);
       --radius: 16px;
       --radius-sm: 10px;
       --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -85,51 +86,50 @@
     html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-      color: var(--text-dark);
-      background: var(--ivory);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: var(--text-secondary);
+      background: var(--bg-primary);
       line-height: 1.7;
       font-size: 16px;
       overflow-x: hidden;
     }
 
     /* ── Typography ────────────────────────────────── */
-    h1, h2, h3, h4 { line-height: 1.2; font-weight: 600; }
-    h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); letter-spacing: -0.03em; }
-    h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); letter-spacing: -0.02em; }
-    h3 { font-size: clamp(1.1rem, 2vw, 1.35rem); }
-    p { color: var(--text-body); }
+    h1, h2, h3, h4 { line-height: 1.2; font-weight: 500; color: var(--text-primary); }
+    h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 300; letter-spacing: -0.03em; }
+    h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 400; letter-spacing: -0.02em; }
+    h3 { font-size: clamp(1.05rem, 2vw, 1.3rem); font-weight: 500; }
+    p { color: var(--text-secondary); }
+
+    .gradient-text {
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
 
     .section-label {
       display: inline-block;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.18em;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: var(--gold);
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
       margin-bottom: 12px;
     }
 
     .section-title { margin-bottom: 16px; }
-    .section-subtitle { font-size: 1.05rem; max-width: 580px; margin: 0 auto 40px; }
+    .section-subtitle { font-size: 1.02rem; max-width: 540px; margin: 0 auto 44px; color: var(--text-tertiary); }
 
     /* ── Layout ────────────────────────────────────── */
-    .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
-
-    section {
-      padding: 80px 0;
-    }
-
-    .dark-section {
-      background: var(--deep-navy);
-      color: var(--text-light);
-    }
-    .dark-section p { color: var(--text-muted); }
-    .dark-section .section-title { color: #fff; }
-
-    .cream-section { background: var(--cream); }
-
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+    section { padding: 88px 0; }
     .text-center { text-align: center; }
+
+    .alt-section { background: var(--bg-secondary); }
 
     /* ── Buttons ───────────────────────────────────── */
     .btn {
@@ -138,8 +138,9 @@
       justify-content: center;
       gap: 8px;
       padding: 14px 32px;
-      font-size: 0.95rem;
-      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
       border-radius: 50px;
       text-decoration: none;
       transition: all var(--transition);
@@ -149,37 +150,37 @@
     }
 
     .btn-primary {
-      background: var(--gold);
-      color: var(--midnight);
-      box-shadow: var(--shadow-gold);
+      background: var(--gradient);
+      color: var(--text-dark);
+      box-shadow: var(--shadow-glow);
     }
     .btn-primary:hover {
-      background: var(--gold-light);
       transform: translateY(-2px);
-      box-shadow: 0 6px 30px rgba(201, 162, 78, 0.35);
+      box-shadow: 0 6px 35px rgba(201, 175, 235, 0.25);
     }
 
     .btn-outline {
       background: transparent;
-      color: var(--cream);
-      border: 1.5px solid rgba(201, 162, 78, 0.4);
+      color: var(--text-primary);
+      border: 1px solid rgba(255, 255, 255, 0.12);
     }
     .btn-outline:hover {
-      border-color: var(--gold);
-      background: rgba(201, 162, 78, 0.08);
+      border-color: rgba(201, 175, 235, 0.3);
+      background: rgba(201, 175, 235, 0.05);
       transform: translateY(-2px);
     }
 
-    .btn-dark {
-      background: var(--deep-navy);
-      color: var(--cream);
+    .btn-ghost {
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--text-primary);
+      border: 1px solid var(--border);
     }
-    .btn-dark:hover {
-      background: var(--navy);
+    .btn-ghost:hover {
+      background: rgba(255, 255, 255, 0.1);
       transform: translateY(-2px);
     }
 
-    .btn-sm { padding: 10px 22px; font-size: 0.85rem; }
+    .btn-sm { padding: 11px 22px; font-size: 0.85rem; }
 
     /* ── Navigation ────────────────────────────────── */
     .nav {
@@ -192,56 +193,52 @@
       transition: all var(--transition);
     }
     .nav.scrolled {
-      background: rgba(12, 18, 34, 0.95);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      box-shadow: 0 1px 30px rgba(0, 0, 0, 0.3);
+      background: rgba(27, 29, 33, 0.92);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      box-shadow: 0 1px 30px rgba(0, 0, 0, 0.4);
     }
     .nav-inner {
-      max-width: 1120px;
+      max-width: 1080px;
       margin: 0 auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 72px;
+      height: 68px;
     }
     .nav-logo {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: #fff;
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--text-primary);
       text-decoration: none;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 3px;
       letter-spacing: -0.01em;
     }
-    .nav-logo .moon { font-size: 1.3rem; }
-    .nav-logo span { color: var(--gold); }
+    .nav-logo .accent { font-weight: 400; color: var(--lavender); }
 
-    .nav-links { display: flex; align-items: center; gap: 32px; }
+    .nav-links { display: flex; align-items: center; gap: 28px; }
     .nav-links a {
-      color: var(--text-muted);
+      color: var(--text-tertiary);
       text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 500;
+      font-size: 0.85rem;
+      font-weight: 400;
       transition: color var(--transition);
     }
-    .nav-links a:hover { color: #fff; }
+    .nav-links a:hover { color: var(--text-primary); }
 
-    .nav-phone {
-      color: var(--text-muted) !important;
-      font-size: 0.85rem !important;
-    }
+    .nav-phone { font-size: 0.82rem !important; }
 
     .nav-cta {
-      background: var(--gold) !important;
-      color: var(--midnight) !important;
-      padding: 9px 22px !important;
+      background: var(--gradient) !important;
+      color: var(--text-dark) !important;
+      padding: 8px 20px !important;
       border-radius: 50px !important;
-      font-weight: 600 !important;
-      font-size: 0.85rem !important;
+      font-weight: 500 !important;
+      font-size: 0.82rem !important;
     }
-    .nav-cta:hover { background: var(--gold-light) !important; color: var(--midnight) !important; }
+    .nav-cta:hover { opacity: 0.9; color: var(--text-dark) !important; }
 
     .nav-toggle {
       display: none;
@@ -254,9 +251,9 @@
     }
     .nav-toggle span {
       display: block;
-      width: 24px;
-      height: 2px;
-      background: #fff;
+      width: 22px;
+      height: 1.5px;
+      background: var(--text-primary);
       border-radius: 2px;
       transition: all var(--transition);
     }
@@ -264,20 +261,20 @@
     @media (max-width: 768px) {
       .nav-links {
         position: fixed;
-        top: 72px;
+        top: 68px;
         left: 0;
         right: 0;
-        background: rgba(12, 18, 34, 0.98);
-        backdrop-filter: blur(20px);
+        background: rgba(27, 29, 33, 0.98);
+        backdrop-filter: blur(24px);
         flex-direction: column;
         padding: 24px;
-        gap: 20px;
+        gap: 18px;
         transform: translateY(-120%);
         transition: transform var(--transition);
-        border-bottom: 1px solid var(--border-dark);
+        border-bottom: 1px solid var(--border);
       }
       .nav-links.open { transform: translateY(0); }
-      .nav-links a { font-size: 1rem; }
+      .nav-links a { font-size: 0.95rem; }
       .nav-toggle { display: flex; }
       .nav-phone { display: none !important; }
     }
@@ -288,117 +285,111 @@
       min-height: 100vh;
       display: flex;
       align-items: center;
-      background: linear-gradient(165deg, var(--midnight) 0%, var(--deep-navy) 40%, var(--navy) 100%);
+      background: var(--bg-primary);
       overflow: hidden;
       padding: 120px 0 80px;
     }
     .hero::before {
       content: '';
       position: absolute;
-      top: -40%;
-      right: -20%;
-      width: 70vw;
-      height: 70vw;
-      max-width: 800px;
-      max-height: 800px;
-      background: radial-gradient(circle, rgba(201, 162, 78, 0.06) 0%, transparent 70%);
+      top: -20%;
+      right: -10%;
+      width: 60vw;
+      height: 60vw;
+      max-width: 700px;
+      max-height: 700px;
+      background: radial-gradient(circle, rgba(201, 175, 235, 0.05) 0%, transparent 65%);
       border-radius: 50%;
     }
     .hero::after {
       content: '';
       position: absolute;
-      bottom: -30%;
-      left: -10%;
-      width: 50vw;
-      height: 50vw;
-      max-width: 600px;
-      max-height: 600px;
-      background: radial-gradient(circle, rgba(100, 140, 200, 0.04) 0%, transparent 70%);
+      bottom: -20%;
+      left: -5%;
+      width: 40vw;
+      height: 40vw;
+      max-width: 500px;
+      max-height: 500px;
+      background: radial-gradient(circle, rgba(228, 140, 92, 0.04) 0%, transparent 65%);
       border-radius: 50%;
     }
     .hero-content {
       position: relative;
       z-index: 1;
-      max-width: 680px;
+      max-width: 640px;
     }
     .hero-badge {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      background: rgba(201, 162, 78, 0.1);
-      border: 1px solid rgba(201, 162, 78, 0.2);
+      gap: 8px;
+      background: rgba(201, 175, 235, 0.08);
+      border: 1px solid rgba(201, 175, 235, 0.12);
       padding: 6px 16px;
       border-radius: 50px;
-      font-size: 0.8rem;
-      color: var(--gold);
-      font-weight: 600;
+      font-size: 0.78rem;
+      color: var(--lavender);
+      font-weight: 500;
       margin-bottom: 28px;
       letter-spacing: 0.02em;
     }
-    .hero-badge .stars { letter-spacing: 2px; }
+    .hero-badge .stars { letter-spacing: 2px; color: var(--coral); }
 
-    .hero h1 {
-      color: #fff;
-      margin-bottom: 20px;
-      font-weight: 700;
-    }
-    .hero h1 em {
-      font-style: normal;
-      background: linear-gradient(135deg, var(--gold), var(--gold-light));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
+    .hero h1 { margin-bottom: 20px; font-weight: 300; }
+
     .hero-sub {
-      font-size: 1.1rem;
-      color: var(--text-muted);
+      font-size: 1.05rem;
+      color: var(--text-tertiary);
       margin-bottom: 36px;
-      max-width: 520px;
-      line-height: 1.7;
+      max-width: 500px;
+      line-height: 1.75;
     }
-    .hero-btns {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
+    .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
 
     /* ── Trust Bar ─────────────────────────────────── */
     .trust-bar {
-      background: var(--cream);
-      border-bottom: 1px solid var(--border-light);
-      padding: 20px 0;
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 0;
     }
     .trust-bar-inner {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 36px;
+      gap: 32px;
       flex-wrap: wrap;
     }
     .trust-item {
       display: flex;
       align-items: center;
       gap: 8px;
-      font-size: 0.9rem;
-      color: var(--text-body);
-      font-weight: 500;
+      font-size: 0.85rem;
+      color: var(--text-tertiary);
+      font-weight: 400;
     }
-    .trust-item .icon { font-size: 1.1rem; }
-    .trust-item strong { color: var(--text-dark); }
+    .trust-item .icon {
+      width: 16px;
+      height: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .trust-item .icon svg { width: 16px; height: 16px; }
+    .trust-item strong { color: var(--text-primary); font-weight: 500; }
 
     /* ── Services ──────────────────────────────────── */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 20px;
+      gap: 16px;
       margin-top: 8px;
     }
 
     .service-card {
-      background: #fff;
-      border: 1px solid rgba(0, 0, 0, 0.06);
+      background: var(--bg-card);
+      border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 32px 28px;
+      padding: 30px 26px;
       transition: all var(--transition);
       position: relative;
       overflow: hidden;
@@ -412,15 +403,15 @@
       top: 0;
       left: 0;
       right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      height: 2px;
+      background: var(--gradient);
       opacity: 0;
       transition: opacity var(--transition);
     }
     .service-card:hover {
-      transform: translateY(-4px);
+      transform: translateY(-3px);
       box-shadow: var(--shadow-card);
-      border-color: rgba(201, 162, 78, 0.15);
+      border-color: rgba(201, 175, 235, 0.1);
     }
     .service-card:hover::before { opacity: 1; }
 
@@ -428,53 +419,59 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
-    .service-card h3 { color: var(--text-dark); font-weight: 600; }
+    .service-card h3 { color: var(--text-primary); font-weight: 500; }
     .service-card .service-price {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--gold);
+      font-size: 1.25rem;
+      font-weight: 600;
       white-space: nowrap;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
     .service-card .service-duration {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      font-weight: 500;
+      font-size: 0.78rem;
+      color: var(--text-tertiary);
+      font-weight: 400;
       margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-      gap: 4px;
     }
     .service-card .service-desc {
-      font-size: 0.92rem;
-      color: var(--text-body);
-      line-height: 1.6;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
       margin-bottom: 16px;
     }
     .service-card .service-book {
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--gold);
+      font-size: 0.82rem;
+      font-weight: 500;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
       display: inline-flex;
       align-items: center;
       gap: 6px;
       transition: gap var(--transition);
     }
+    .service-card .service-book .arrow {
+      -webkit-text-fill-color: var(--lavender);
+    }
     .service-card:hover .service-book { gap: 10px; }
 
     .service-featured {
-      border: 1.5px solid rgba(201, 162, 78, 0.25);
-      background: linear-gradient(180deg, rgba(201, 162, 78, 0.03) 0%, #fff 100%);
+      border: 1px solid rgba(201, 175, 235, 0.15);
+      background: linear-gradient(180deg, rgba(201, 175, 235, 0.04) 0%, var(--bg-card) 100%);
     }
     .service-featured-tag {
       position: absolute;
-      top: 16px;
-      right: 16px;
-      background: var(--gold);
-      color: var(--midnight);
-      font-size: 0.7rem;
-      font-weight: 700;
+      top: 14px;
+      right: 14px;
+      background: var(--gradient);
+      color: var(--text-dark);
+      font-size: 0.68rem;
+      font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.08em;
       padding: 3px 10px;
@@ -484,48 +481,47 @@
     .services-note {
       text-align: center;
       margin-top: 24px;
-      font-size: 0.85rem;
-      color: var(--text-muted);
+      font-size: 0.82rem;
+      color: var(--text-tertiary);
       font-style: italic;
     }
 
     /* ── Add-Ons ───────────────────────────────────── */
-    .addons {
-      padding: 48px 0 80px;
-    }
+    .addons { padding: 48px 0 0; }
     .addons-grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 10px;
+      gap: 8px;
     }
     .addon-pill {
-      background: #fff;
-      border: 1px solid rgba(0, 0, 0, 0.08);
-      padding: 10px 20px;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      padding: 9px 18px;
       border-radius: 50px;
-      font-size: 0.88rem;
-      color: var(--text-body);
-      font-weight: 500;
+      font-size: 0.84rem;
+      color: var(--text-secondary);
+      font-weight: 400;
       transition: all var(--transition);
     }
     .addon-pill:hover {
-      border-color: rgba(201, 162, 78, 0.3);
-      background: rgba(201, 162, 78, 0.04);
-      color: var(--text-dark);
+      border-color: var(--border-accent);
+      background: rgba(201, 175, 235, 0.06);
+      color: var(--text-primary);
     }
 
     /* ── About ─────────────────────────────────────── */
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 60px;
+      gap: 56px;
       align-items: center;
     }
     .about-visual {
-      background: linear-gradient(135deg, var(--deep-navy), var(--navy));
+      background: var(--bg-card);
+      border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 48px 40px;
+      padding: 48px 36px;
       text-align: center;
       min-height: 380px;
       display: flex;
@@ -542,73 +538,86 @@
       right: -30%;
       width: 60%;
       height: 60%;
-      background: radial-gradient(circle, rgba(201, 162, 78, 0.08) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(201, 175, 235, 0.06) 0%, transparent 70%);
       border-radius: 50%;
     }
-    .about-moon {
-      font-size: 4rem;
+    .about-visual::after {
+      content: '';
+      position: absolute;
+      bottom: -20%;
+      left: -20%;
+      width: 40%;
+      height: 40%;
+      background: radial-gradient(circle, rgba(228, 140, 92, 0.04) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .about-icon {
+      width: 64px;
+      height: 64px;
       margin-bottom: 20px;
       position: relative;
+      opacity: 0.7;
     }
+    .about-icon svg { width: 100%; height: 100%; }
     .about-visual h3 {
-      color: #fff;
-      font-size: 1.5rem;
+      font-size: 1.4rem;
+      font-weight: 400;
       margin-bottom: 8px;
       position: relative;
     }
-    .about-visual p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      max-width: 300px;
+    .about-visual > p {
+      color: var(--text-tertiary);
+      font-size: 0.92rem;
+      max-width: 280px;
       position: relative;
     }
     .about-traditions {
       display: flex;
-      gap: 16px;
+      gap: 10px;
       margin-top: 24px;
       position: relative;
     }
     .about-traditions span {
-      padding: 6px 14px;
-      border: 1px solid rgba(201, 162, 78, 0.2);
+      padding: 5px 14px;
+      border: 1px solid var(--border-accent);
       border-radius: 50px;
-      font-size: 0.8rem;
-      color: var(--gold);
-      font-weight: 500;
+      font-size: 0.78rem;
+      color: var(--lavender);
+      font-weight: 400;
     }
     .about-text h2 { margin-bottom: 20px; }
-    .about-text > p { margin-bottom: 16px; }
+    .about-text > p { margin-bottom: 14px; line-height: 1.75; }
 
     .team-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 12px;
+      gap: 10px;
       margin-top: 28px;
     }
     .team-card {
-      background: #fff;
-      border: 1px solid rgba(0, 0, 0, 0.06);
+      background: var(--bg-card);
+      border: 1px solid var(--border);
       border-radius: var(--radius-sm);
-      padding: 18px 16px;
+      padding: 16px 14px;
     }
     .team-card h4 {
-      font-size: 0.92rem;
-      font-weight: 600;
-      color: var(--text-dark);
-      margin-bottom: 2px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      margin-bottom: 1px;
     }
     .team-card .team-role {
-      font-size: 0.78rem;
-      color: var(--gold);
-      font-weight: 600;
+      font-size: 0.72rem;
+      font-weight: 500;
       text-transform: uppercase;
-      letter-spacing: 0.06em;
-      margin-bottom: 6px;
+      letter-spacing: 0.08em;
+      margin-bottom: 5px;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
-    .team-card p {
-      font-size: 0.82rem;
-      line-height: 1.5;
-    }
+    .team-card p { font-size: 0.8rem; line-height: 1.5; }
 
     @media (max-width: 768px) {
       .about-grid { grid-template-columns: 1fr; gap: 32px; }
@@ -620,71 +629,69 @@
     .reviews-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
+      gap: 16px;
     }
     .review-card {
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid var(--border-dark);
+      background: var(--bg-card);
+      border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 32px 28px;
+      padding: 28px 24px;
     }
     .review-stars {
-      color: var(--gold);
-      font-size: 1rem;
-      letter-spacing: 3px;
+      font-size: 0.9rem;
+      letter-spacing: 2px;
       margin-bottom: 14px;
+      color: var(--coral);
     }
     .review-text {
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       line-height: 1.7;
-      color: var(--text-muted);
+      color: var(--text-secondary);
       margin-bottom: 18px;
       font-style: italic;
     }
     .review-author {
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: #fff;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--text-primary);
     }
     .review-source {
-      font-size: 0.75rem;
-      color: var(--text-muted);
+      font-size: 0.72rem;
+      color: var(--text-tertiary);
       margin-top: 2px;
     }
 
     /* ── Your Visit ────────────────────────────────── */
     .visit-steps {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 16px;
       margin-top: 8px;
     }
     .visit-step {
       text-align: center;
-      padding: 32px 24px;
-      background: #fff;
-      border: 1px solid rgba(0, 0, 0, 0.06);
+      padding: 32px 22px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
       border-radius: var(--radius);
     }
     .visit-step-num {
-      width: 40px;
-      height: 40px;
+      width: 36px;
+      height: 36px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      background: var(--gold-glow);
-      color: var(--gold);
-      font-weight: 700;
-      font-size: 0.9rem;
+      background: var(--gradient-subtle);
+      border: 1px solid var(--border-accent);
       border-radius: 50%;
       margin-bottom: 16px;
-      border: 1px solid rgba(201, 162, 78, 0.2);
+      font-size: 0.82rem;
+      font-weight: 600;
+      background-clip: padding-box;
+      color: var(--lavender);
     }
-    .visit-step h3 {
-      margin-bottom: 8px;
-      font-size: 1.05rem;
-    }
-    .visit-step p { font-size: 0.9rem; }
+    .visit-step h3 { margin-bottom: 8px; font-size: 1rem; font-weight: 500; }
+    .visit-step p { font-size: 0.88rem; }
 
     /* ── Contact ───────────────────────────────────── */
     .contact-grid {
@@ -699,53 +706,49 @@
       margin-bottom: 24px;
     }
     .contact-info-icon {
-      width: 44px;
-      height: 44px;
+      width: 40px;
+      height: 40px;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: rgba(201, 162, 78, 0.08);
-      border: 1px solid rgba(201, 162, 78, 0.15);
-      border-radius: 12px;
+      background: var(--gradient-subtle);
+      border: 1px solid var(--border-accent);
+      border-radius: 10px;
       flex-shrink: 0;
-      font-size: 1.1rem;
     }
+    .contact-info-icon svg { width: 18px; height: 18px; stroke: var(--lavender); fill: none; stroke-width: 1.5; }
     .contact-info-item h4 {
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: #fff;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--text-primary);
       margin-bottom: 2px;
     }
     .contact-info-item p {
-      font-size: 0.9rem;
-      color: var(--text-muted);
+      font-size: 0.88rem;
+      color: var(--text-secondary);
       line-height: 1.5;
     }
     .contact-info-item a {
-      color: var(--gold);
+      color: var(--lavender);
       text-decoration: none;
       transition: color var(--transition);
     }
-    .contact-info-item a:hover { color: var(--gold-light); }
+    .contact-info-item a:hover { color: var(--coral); }
 
-    .hours-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-    }
+    .hours-table { width: 100%; border-collapse: collapse; margin-top: 16px; }
     .hours-table td {
-      padding: 8px 0;
-      font-size: 0.88rem;
-      border-bottom: 1px solid var(--border-dark);
+      padding: 7px 0;
+      font-size: 0.85rem;
+      border-bottom: 1px solid var(--border);
     }
-    .hours-table td:first-child { color: var(--text-muted); font-weight: 500; }
-    .hours-table td:last-child { color: #fff; text-align: right; font-weight: 500; }
-    .hours-table tr.today td { color: var(--gold); }
+    .hours-table td:first-child { color: var(--text-tertiary); font-weight: 400; }
+    .hours-table td:last-child { color: var(--text-secondary); text-align: right; font-weight: 400; }
+    .hours-table tr.today td { color: var(--lavender); }
 
     .contact-map {
       border-radius: var(--radius);
       overflow: hidden;
-      border: 1px solid var(--border-dark);
+      border: 1px solid var(--border);
       height: 100%;
       min-height: 400px;
     }
@@ -755,7 +758,7 @@
       min-height: 400px;
       border: 0;
       display: block;
-      filter: grayscale(0.3) contrast(1.1);
+      filter: invert(0.9) hue-rotate(180deg) saturate(0.3) brightness(0.7);
     }
 
     @media (max-width: 768px) {
@@ -764,27 +767,48 @@
       .contact-map iframe { min-height: 300px; }
     }
 
+    /* ── CTA Banner ────────────────────────────────── */
+    .cta-banner {
+      background: var(--bg-card);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 72px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-banner::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(201, 175, 235, 0.04) 0%, transparent 60%);
+      border-radius: 50%;
+    }
+
     /* ── Footer ────────────────────────────────────── */
     .footer {
-      background: var(--midnight);
+      background: var(--bg-primary);
       padding: 40px 0;
       text-align: center;
-      border-top: 1px solid var(--border-dark);
     }
     .footer-brand {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: #fff;
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--text-primary);
       margin-bottom: 8px;
     }
-    .footer-brand span { color: var(--gold); }
+    .footer-brand .accent { color: var(--lavender); }
     .footer p {
-      font-size: 0.82rem;
-      color: var(--text-muted);
+      font-size: 0.8rem;
+      color: var(--text-tertiary);
       margin-bottom: 4px;
     }
-    .footer a { color: var(--gold); text-decoration: none; }
-    .footer a:hover { color: var(--gold-light); }
+    .footer a { color: var(--lavender); text-decoration: none; }
+    .footer a:hover { color: var(--coral); }
 
     /* ── Sticky Mobile CTA ─────────────────────────── */
     .mobile-cta {
@@ -794,64 +818,48 @@
       left: 0;
       right: 0;
       z-index: 999;
-      background: rgba(12, 18, 34, 0.97);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
+      background: rgba(27, 29, 33, 0.97);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
       padding: 12px 16px;
-      border-top: 1px solid rgba(201, 162, 78, 0.15);
+      border-top: 1px solid var(--border);
     }
-    .mobile-cta-inner {
-      display: flex;
-      gap: 10px;
-    }
-    .mobile-cta .btn {
-      flex: 1;
-      padding: 13px 16px;
-      font-size: 0.9rem;
-      text-align: center;
-    }
+    .mobile-cta-inner { display: flex; gap: 10px; }
+    .mobile-cta .btn { flex: 1; padding: 13px 16px; font-size: 0.88rem; text-align: center; }
 
     @media (max-width: 768px) {
       .mobile-cta { display: block; }
-      .footer { padding-bottom: 90px; }
+      .footer { padding-bottom: 88px; }
     }
 
     /* ── Animations ────────────────────────────────── */
     .fade-in {
       opacity: 0;
-      transform: translateY(24px);
+      transform: translateY(20px);
       transition: opacity 0.6s ease, transform 0.6s ease;
     }
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
 
-    /* ── Utility ───────────────────────────────────── */
     @media (max-width: 480px) {
-      section { padding: 60px 0; }
-      .hero { padding: 100px 0 60px; }
+      section { padding: 64px 0; }
+      .hero { padding: 100px 0 64px; }
       .services-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
-<!-- ═══════════════════════════════════════════════════
-     NAVIGATION
-     ═══════════════════════════════════════════════════ -->
+<!-- NAV -->
 <nav class="nav" id="nav">
   <div class="nav-inner">
-    <a href="#" class="nav-logo">
-      <span class="moon">🌙</span> Moonlight <span>Head Spa</span>
-    </a>
+    <a href="#" class="nav-logo">Moonlight <span class="accent">Head Spa</span></a>
     <div class="nav-links" id="navLinks">
       <a href="#services">Services</a>
       <a href="#about">About</a>
       <a href="#reviews">Reviews</a>
       <a href="#contact">Contact</a>
       <a href="tel:5124880841" class="nav-phone">(512) 488-0841</a>
-      <a href="https://moonlightheadspa.glossgenius.com/" target="_blank" rel="noopener" class="nav-cta">Book Now</a>
+      <a href="https://moonlightheadspa.glossgenius.com/booking-flow" target="_blank" rel="noopener" class="nav-cta">Book Now</a>
     </div>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
       <span></span><span></span><span></span>
@@ -859,9 +867,7 @@
   </div>
 </nav>
 
-<!-- ═══════════════════════════════════════════════════
-     HERO
-     ═══════════════════════════════════════════════════ -->
+<!-- HERO -->
 <section class="hero">
   <div class="container">
     <div class="hero-content">
@@ -869,49 +875,45 @@
         <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span>5.0 on Google</span>
       </div>
-      <h1>Where Stillness Meets <em>Radiance</em></h1>
+      <h1>Where Stillness Meets <span class="gradient-text">Radiance</span></h1>
       <p class="hero-sub">
-        Austin's premier Japanese & Vietnamese-inspired head spa. Deep scalp therapy,
+        Austin's premier Japanese &amp; Vietnamese-inspired head spa. Deep scalp therapy,
         sound healing, and holistic renewal — designed to quiet your mind and restore your glow.
       </p>
       <div class="hero-btns">
-        <a href="https://moonlightheadspa.glossgenius.com/" target="_blank" rel="noopener" class="btn btn-primary">Book Your Escape</a>
+        <a href="https://moonlightheadspa.glossgenius.com/booking-flow" target="_blank" rel="noopener" class="btn btn-primary">Book Your Session</a>
         <a href="tel:5124880841" class="btn btn-outline">Call (512) 488-0841</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════
-     TRUST BAR
-     ═══════════════════════════════════════════════════ -->
+<!-- TRUST BAR -->
 <div class="trust-bar">
   <div class="container">
     <div class="trust-bar-inner">
       <div class="trust-item">
-        <span class="icon">&#9733;</span>
+        <span class="icon"><svg viewBox="0 0 24 24" fill="currentColor" style="color:var(--coral)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
         <span><strong>5.0</strong> Google Rating</span>
       </div>
       <div class="trust-item">
-        <span class="icon">&#128205;</span>
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
         <span>Austin, TX</span>
       </div>
       <div class="trust-item">
-        <span class="icon">&#128336;</span>
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
         <span>Open Today &mdash; <strong id="todayHours">See Hours</strong></span>
       </div>
       <div class="trust-item">
-        <span class="icon">&#10024;</span>
-        <span>Japanese & Vietnamese Traditions</span>
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3a6 6 0 016 6c0 7-6 12-6 12S6 16 6 9a6 6 0 016-6z"/></svg></span>
+        <span>Japanese &amp; Vietnamese Traditions</span>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════════════
-     SERVICES
-     ═══════════════════════════════════════════════════ -->
-<section id="services" class="cream-section">
+<!-- SERVICES -->
+<section id="services" class="alt-section">
   <div class="container">
     <div class="text-center">
       <span class="section-label">Our Treatments</span>
@@ -920,87 +922,86 @@
     </div>
 
     <div class="services-grid">
-      <a href="https://moonlightheadspa.glossgenius.com/" target="_blank" rel="noopener" class="service-card fade-in">
+      <a href="https://moonlightheadspa.glossgenius.com/booking-flow" target="_blank" rel="noopener" class="service-card fade-in">
         <div class="service-card-top">
           <div>
             <h3>Glowup Express</h3>
-            <div class="service-duration">&#9201; 55 minutes</div>
+            <div class="service-duration">55 minutes</div>
           </div>
           <div class="service-price">$110</div>
         </div>
         <p class="service-desc">A quick scalp refresh — double cleanse, conditioning mask, relaxing scalp massage, and blow dry. Perfect for a midweek reset.</p>
-        <span class="service-book">Book Now &#8594;</span>
+        <span class="service-book">Book Now <span class="arrow">&rarr;</span></span>
       </a>
 
-      <a href="https://moonlightheadspa.glossgenius.com/" target="_blank" rel="noopener" class="service-card fade-in">
+      <a href="https://moonlightheadspa.glossgenius.com/booking-flow" target="_blank" rel="noopener" class="service-card fade-in">
         <div class="service-card-top">
           <div>
             <h3>Inner Radiance</h3>
-            <div class="service-duration">&#9201; 85 minutes</div>
+            <div class="service-duration">85 minutes</div>
           </div>
           <div class="service-price">$140</div>
         </div>
-        <p class="service-desc">Double scalp cleanse, nourishing hair & face mask, mini facial, neck and shoulder massage, finished with a blow dry.</p>
-        <span class="service-book">Book Now &#8594;</span>
+        <p class="service-desc">Double scalp cleanse, nourishing hair and face mask, mini facial, neck and shoulder massage, finished with a blow dry.</p>
+        <span class="service-book">Book Now <span class="arrow">&rarr;</span></span>
       </a>
 
-      <a href="https://moonlightheadspa.glossgenius.com/" target="_blank" rel="noopener" class="service-card fade-in">
+      <a href="https://moonlightheadspa.glossgenius.com/booking-flow" target="_blank" rel="noopener" class="service-card fade-in">
         <div class="service-card-top">
           <div>
             <h3>Lumina Bliss</h3>
-            <div class="service-duration">&#9201; 105 minutes</div>
+            <div class="service-duration">105 minutes</div>
           </div>
           <div class="service-price">$168</div>
         </div>
-        <p class="service-desc">Everything in Inner Radiance with extended massage and deeper scalp treatment. Surrender to a longer, more immersive escape.</p>
-        <span class="service-book">Book Now &#8594;</span>
+        <p class="service-desc">Everything in Inner Radiance with extended massage and deeper scalp treatment. A longer, more immersive escape.</p>
+        <span class="service-book">Book Now <span class="arrow">&rarr;</span></span>
       </a>
 
-      <a href="https://moonlightheadspa.glossgenius.com/" target="_blank" rel="noopener" class="service-card service-featured fade-in">
+      <a href="https://moonlightheadspa.glossgenius.com/booking-flow" target="_blank" rel="noopener" class="service-card service-featured fade-in">
         <span class="service-featured-tag">Most Popular</span>
         <div class="service-card-top">
           <div>
             <h3>Serenity Retreat</h3>
-            <div class="service-duration">&#9201; 125 minutes</div>
+            <div class="service-duration">125 minutes</div>
           </div>
           <div class="service-price">$199</div>
         </div>
         <p class="service-desc">The full ritual — gua sha facial sculpting, hot stone massage, warm paraffin hands, Thai herbal ball compression, sound healing, 7 chakra realignment, and scalp tonic.</p>
-        <span class="service-book">Book Now &#8594;</span>
+        <span class="service-book">Book Now <span class="arrow">&rarr;</span></span>
       </a>
 
-      <a href="https://moonlightheadspa.glossgenius.com/" target="_blank" rel="noopener" class="service-card fade-in">
+      <a href="https://moonlightheadspa.glossgenius.com/booking-flow" target="_blank" rel="noopener" class="service-card fade-in">
         <div class="service-card-top">
           <div>
             <h3>Celestial Renewal</h3>
-            <div class="service-duration">&#9201; 155 minutes</div>
+            <div class="service-duration">155 minutes</div>
           </div>
           <div class="service-price">$247</div>
         </div>
         <p class="service-desc">Sound healing, detox herbal foot soak, LED light therapy for skin rejuvenation and hair regrowth, plus a stimulating herbal scalp and hair tonic.</p>
-        <span class="service-book">Book Now &#8594;</span>
+        <span class="service-book">Book Now <span class="arrow">&rarr;</span></span>
       </a>
 
-      <a href="https://moonlightheadspa.glossgenius.com/" target="_blank" rel="noopener" class="service-card fade-in">
+      <a href="https://moonlightheadspa.glossgenius.com/booking-flow" target="_blank" rel="noopener" class="service-card fade-in">
         <div class="service-card-top">
           <div>
             <h3>Divine Feminine Awakening</h3>
-            <div class="service-duration">&#9201; 190 minutes</div>
+            <div class="service-duration">190 minutes</div>
           </div>
           <div class="service-price">$330</div>
         </div>
         <p class="service-desc">The ultimate experience — a full combination of every treatment we offer. Over three hours of complete immersion in healing, beauty, and renewal.</p>
-        <span class="service-book">Book Now &#8594;</span>
+        <span class="service-book">Book Now <span class="arrow">&rarr;</span></span>
       </a>
     </div>
 
     <p class="services-note">$10+ surcharge may apply for longer, thicker, or extension-enhanced hair.</p>
 
-    <!-- Add-Ons -->
     <div class="addons">
       <div class="text-center">
         <span class="section-label">Enhance Your Visit</span>
-        <h3 class="section-title" style="margin-bottom: 24px;">Add-On Treatments</h3>
+        <h3 class="section-title" style="margin-bottom: 20px;">Add-On Treatments</h3>
       </div>
       <div class="addons-grid">
         <div class="addon-pill">Deep Scalp Exfoliant + Mask</div>
@@ -1015,14 +1016,18 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════
-     ABOUT
-     ═══════════════════════════════════════════════════ -->
+<!-- ABOUT -->
 <section id="about">
   <div class="container">
     <div class="about-grid">
       <div class="about-visual fade-in">
-        <div class="about-moon">🌙</div>
+        <div class="about-icon">
+          <svg viewBox="0 0 64 64" fill="none" stroke="var(--lavender)" stroke-width="1.2">
+            <circle cx="32" cy="32" r="28" opacity="0.3"/>
+            <path d="M32 8a24 24 0 010 48 20 20 0 000-48z" fill="rgba(201,175,235,0.08)"/>
+            <circle cx="32" cy="32" r="4" fill="var(--lavender)" opacity="0.4"/>
+          </svg>
+        </div>
         <h3>Rooted in Tradition</h3>
         <p>Ancient healing wisdom meets modern scalp science in an intimate Austin studio</p>
         <div class="about-traditions">
@@ -1034,7 +1039,7 @@
 
       <div class="about-text fade-in">
         <span class="section-label">Our Story</span>
-        <h2 class="section-title">More Than a Spa — A Sanctuary</h2>
+        <h2 class="section-title">More Than a Spa &mdash; A Sanctuary</h2>
         <p>Moonlight Head Spa was born from a deep belief that true beauty starts at the crown. Drawing from Japanese and Vietnamese healing traditions, every treatment is designed to restore not just your scalp and hair, but your sense of inner calm.</p>
         <p>Tucked inside Renu Well Aesthetics in North Austin, our intimate studio is a space where time slows down. Expect sound healing bowls, aromatherapy, warm stones, and intuitive hands that know exactly where you hold your tension.</p>
 
@@ -1065,13 +1070,11 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════
-     REVIEWS
-     ═══════════════════════════════════════════════════ -->
-<section id="reviews" class="dark-section">
+<!-- REVIEWS -->
+<section id="reviews" class="alt-section">
   <div class="container">
     <div class="text-center">
-      <span class="section-label">Client Love</span>
+      <span class="section-label">Client Experiences</span>
       <h2 class="section-title">What Our Guests Say</h2>
       <p class="section-subtitle">Rated 5.0 stars on Google — every visit is crafted to be unforgettable.</p>
     </div>
@@ -1101,10 +1104,8 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════
-     YOUR VISIT
-     ═══════════════════════════════════════════════════ -->
-<section class="cream-section">
+<!-- YOUR VISIT -->
+<section>
   <div class="container">
     <div class="text-center">
       <span class="section-label">Plan Your Visit</span>
@@ -1120,12 +1121,12 @@
       </div>
       <div class="visit-step fade-in">
         <div class="visit-step-num">2</div>
-        <h3>Arrive & Text Us</h3>
+        <h3>Arrive &amp; Text Us</h3>
         <p>We're on the second floor of Renu Well Aesthetics (no elevator). Text us when you arrive and we'll greet you.</p>
       </div>
       <div class="visit-step fade-in">
         <div class="visit-step-num">3</div>
-        <h3>Surrender & Restore</h3>
+        <h3>Surrender &amp; Restore</h3>
         <p>Settle into your private treatment space. Close your eyes, breathe deep, and let the healing begin.</p>
       </div>
       <div class="visit-step fade-in">
@@ -1137,10 +1138,8 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════
-     CONTACT
-     ═══════════════════════════════════════════════════ -->
-<section id="contact" class="dark-section">
+<!-- CONTACT -->
+<section id="contact" class="alt-section">
   <div class="container">
     <div class="text-center" style="margin-bottom: 48px;">
       <span class="section-label">Get In Touch</span>
@@ -1150,28 +1149,36 @@
     <div class="contact-grid">
       <div class="fade-in">
         <div class="contact-info-item">
-          <div class="contact-info-icon">&#128205;</div>
+          <div class="contact-info-icon">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
           <div>
             <h4>Address</h4>
             <p>8301 Shoal Creek Blvd<br>Inside Renu Well Aesthetics (Upstairs)<br>Austin, TX 78757</p>
           </div>
         </div>
         <div class="contact-info-item">
-          <div class="contact-info-icon">&#128222;</div>
+          <div class="contact-info-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
           <div>
             <h4>Phone</h4>
             <p><a href="tel:5124880841">(512) 488-0841</a></p>
           </div>
         </div>
         <div class="contact-info-item">
-          <div class="contact-info-icon">&#9993;</div>
+          <div class="contact-info-icon">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
           <div>
             <h4>Email</h4>
             <p><a href="mailto:moonlightheadspa@gmail.com">moonlightheadspa@gmail.com</a></p>
           </div>
         </div>
         <div class="contact-info-item">
-          <div class="contact-info-icon">&#128338;</div>
+          <div class="contact-info-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
           <div>
             <h4>Hours</h4>
             <table class="hours-table" id="hoursTable">
@@ -1199,51 +1206,44 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════
-     CTA BANNER
-     ═══════════════════════════════════════════════════ -->
-<section style="background: linear-gradient(135deg, var(--midnight), var(--navy)); padding: 72px 0; text-align: center;">
-  <div class="container fade-in">
-    <h2 style="color: #fff; margin-bottom: 12px;">Ready to Experience Deep Calm?</h2>
-    <p style="color: var(--text-muted); max-width: 480px; margin: 0 auto 32px; font-size: 1.05rem;">
+<!-- CTA BANNER -->
+<section class="cta-banner">
+  <div class="container fade-in" style="position:relative;">
+    <h2 style="margin-bottom: 12px;">Ready to Experience Deep Calm?</h2>
+    <p style="max-width: 460px; margin: 0 auto 32px; font-size: 1.02rem; color: var(--text-tertiary);">
       Book your head spa session today and discover why Austin's most discerning clients keep coming back.
     </p>
-    <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
-      <a href="https://moonlightheadspa.glossgenius.com/" target="_blank" rel="noopener" class="btn btn-primary">Book Your Session</a>
+    <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+      <a href="https://moonlightheadspa.glossgenius.com/booking-flow" target="_blank" rel="noopener" class="btn btn-primary">Book Your Session</a>
       <a href="tel:5124880841" class="btn btn-outline">Call (512) 488-0841</a>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════
-     FOOTER
-     ═══════════════════════════════════════════════════ -->
+<!-- FOOTER -->
 <footer class="footer">
   <div class="container">
-    <div class="footer-brand">🌙 Moonlight <span>Head Spa</span></div>
+    <div class="footer-brand">Moonlight <span class="accent">Head Spa</span></div>
     <p>8301 Shoal Creek Blvd, Austin, TX 78757</p>
     <p><a href="tel:5124880841">(512) 488-0841</a> &middot; <a href="mailto:moonlightheadspa@gmail.com">moonlightheadspa@gmail.com</a></p>
-    <p style="margin-top: 16px; font-size: 0.75rem;">&copy; 2026 Moonlight Head Spa. All rights reserved.</p>
+    <p style="margin-top: 16px; font-size: 0.72rem;">&copy; 2026 Moonlight Head Spa. All rights reserved.</p>
   </div>
 </footer>
 
-<!-- ═══════════════════════════════════════════════════
-     STICKY MOBILE CTA
-     ═══════════════════════════════════════════════════ -->
+<!-- STICKY MOBILE CTA -->
 <div class="mobile-cta" id="mobileCta">
   <div class="mobile-cta-inner">
-    <a href="tel:5124880841" class="btn btn-dark btn-sm">&#128222; Call</a>
-    <a href="https://moonlightheadspa.glossgenius.com/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Book Now</a>
+    <a href="tel:5124880841" class="btn btn-ghost btn-sm">Call Now</a>
+    <a href="https://moonlightheadspa.glossgenius.com/booking-flow" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Book Now</a>
   </div>
 </div>
 
 <script>
 (function() {
-  // ── Nav scroll effect ──
-  const nav = document.getElementById('nav');
-  const toggle = document.getElementById('navToggle');
-  const links = document.getElementById('navLinks');
-  const mobileCta = document.getElementById('mobileCta');
+  var nav = document.getElementById('nav');
+  var toggle = document.getElementById('navToggle');
+  var links = document.getElementById('navLinks');
+  var mobileCta = document.getElementById('mobileCta');
 
   window.addEventListener('scroll', function() {
     nav.classList.toggle('scrolled', window.scrollY > 40);
@@ -1252,47 +1252,35 @@
     }
   }, { passive: true });
 
-  // Initial state
-  if (mobileCta) mobileCta.style.transform = 'translateY(100%)';
-  mobileCta.style.transition = 'transform 0.3s ease';
+  if (mobileCta) {
+    mobileCta.style.transform = 'translateY(100%)';
+    mobileCta.style.transition = 'transform 0.3s ease';
+  }
 
-  // ── Mobile nav toggle ──
-  toggle.addEventListener('click', function() {
-    links.classList.toggle('open');
-  });
-
-  // Close mobile nav on link click
+  toggle.addEventListener('click', function() { links.classList.toggle('open'); });
   links.querySelectorAll('a').forEach(function(a) {
-    a.addEventListener('click', function() {
-      links.classList.remove('open');
-    });
+    a.addEventListener('click', function() { links.classList.remove('open'); });
   });
 
-  // ── Today's hours ──
   var hours = {
-    0: '9:00 AM – 5:00 PM',
-    1: '12:00 PM – 7:30 PM',
-    2: '11:00 AM – 7:30 PM',
-    3: '11:00 AM – 7:30 PM',
-    4: '11:00 AM – 7:30 PM',
-    5: '10:30 AM – 7:30 PM',
-    6: '9:00 AM – 7:30 PM'
+    0: '9:00 AM \u2013 5:00 PM',
+    1: '12:00 PM \u2013 7:30 PM',
+    2: '11:00 AM \u2013 7:30 PM',
+    3: '11:00 AM \u2013 7:30 PM',
+    4: '11:00 AM \u2013 7:30 PM',
+    5: '10:30 AM \u2013 7:30 PM',
+    6: '9:00 AM \u2013 7:30 PM'
   };
-  var dayNames = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
   var today = new Date().getDay();
   var todayEl = document.getElementById('todayHours');
   if (todayEl) todayEl.textContent = hours[today];
 
-  // Highlight today's row in hours table
   var rows = document.querySelectorAll('#hoursTable tr');
   rows.forEach(function(row, i) {
-    // Table rows: Mon=0, Tue=1, ..., Sun=6 → map to JS: Mon=1, Tue=2, ..., Sun=0
     var dayIndex = (i + 1) % 7;
     if (dayIndex === today) row.classList.add('today');
   });
 
-  // ── Fade-in on scroll ──
-  var fadeEls = document.querySelectorAll('.fade-in');
   var observer = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
       if (entry.isIntersecting) {
@@ -1301,18 +1289,14 @@
       }
     });
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
 
-  fadeEls.forEach(function(el) { observer.observe(el); });
-
-  // ── Smooth scroll for anchor links ──
   document.querySelectorAll('a[href^="#"]').forEach(function(a) {
     a.addEventListener('click', function(e) {
       var target = document.querySelector(this.getAttribute('href'));
       if (target) {
         e.preventDefault();
-        var offset = 80;
-        var y = target.getBoundingClientRect().top + window.pageYOffset - offset;
-        window.scrollTo({ top: y, behavior: 'smooth' });
+        window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - 76, behavior: 'smooth' });
       }
     });
   });
