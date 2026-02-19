@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meet Your Providers | Pure Light Chiropractic &mdash; Austin, TX</title>
+  <meta name="description" content="Meet the team at Pure Light Chiropractic in Austin, TX. Dr. Laine, Dr. Aguilar, and our wellness providers are dedicated to connecting you with your body's natural healing ability.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ---- PAGE HEADER (inner pages) ---- */
+    .page-header {
+      background: var(--sage-light, #E8EDE6);
+      padding: 140px 24px 60px;
+      text-align: center;
+    }
+    .page-header h1 {
+      font-size: clamp(2rem, 4.5vw, 3rem);
+      font-weight: 800;
+      color: var(--charcoal, #2C2C2C);
+      margin-bottom: 12px;
+    }
+    .page-header p {
+      font-size: 1.1rem;
+      color: var(--gray, #5A5A5A);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* ---- MISSION STATEMENT ---- */
+    .mission-section {
+      padding: 64px 24px;
+      text-align: center;
+      background: var(--white, #FFFFFF);
+    }
+    .mission-section blockquote {
+      font-size: clamp(1.15rem, 2.5vw, 1.4rem);
+      font-style: italic;
+      color: var(--charcoal, #2C2C2C);
+      max-width: 780px;
+      margin: 0 auto;
+      line-height: 1.8;
+      position: relative;
+      padding: 0 24px;
+    }
+    .mission-section blockquote::before {
+      content: '\201C';
+      font-size: 4rem;
+      color: var(--green, #6B8F71);
+      position: absolute;
+      top: -20px;
+      left: -8px;
+      font-family: Georgia, serif;
+      line-height: 1;
+      opacity: 0.4;
+    }
+
+    /* ---- PROVIDER BIO (side-by-side) ---- */
+    .provider-section {
+      padding: 80px 24px;
+    }
+    .provider-section:nth-child(even) {
+      background: var(--off-white, #F7F7F5);
+    }
+    .provider-card {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 48px;
+      align-items: start;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .provider-photo-wrap {
+      text-align: center;
+    }
+    .provider-photo {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      border: 5px solid var(--green, #6B8F71);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    }
+    .provider-info h2 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--charcoal, #2C2C2C);
+      margin-bottom: 4px;
+    }
+    .provider-info .provider-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--green, #6B8F71);
+      margin-bottom: 20px;
+      display: block;
+    }
+    .provider-info .provider-quote {
+      font-size: 1.1rem;
+      font-style: italic;
+      color: var(--green, #6B8F71);
+      margin-bottom: 20px;
+      padding-left: 16px;
+      border-left: 3px solid var(--green, #6B8F71);
+      line-height: 1.7;
+    }
+    /* Dr. Aguilar gets amber accent */
+    .provider-section:nth-child(4) .provider-quote {
+      color: var(--color-amber, #D77C39);
+      border-left-color: var(--color-amber, #D77C39);
+    }
+    .provider-section:nth-child(4) .provider-title {
+      color: var(--color-amber, #D77C39);
+    }
+    .provider-section:nth-child(4) .provider-photo {
+      border-color: var(--color-amber, #D77C39);
+    }
+    /* Krykit gets crimson accent */
+    .provider-section:nth-child(5) .provider-title {
+      color: var(--color-crimson, #B42D34);
+    }
+    .provider-section:nth-child(5) .provider-photo {
+      border-color: var(--color-crimson, #B42D34);
+    }
+    .provider-info p {
+      font-size: 1rem;
+      color: var(--gray, #5A5A5A);
+      line-height: 1.8;
+      margin-bottom: 14px;
+    }
+
+    /* ---- TEAM GRID (simpler cards) ---- */
+    .team-section {
+      padding: 80px 24px;
+      background: var(--white, #FFFFFF);
+    }
+    .team-section .section-label,
+    .team-section .section-title,
+    .team-section .section-sub {
+      text-align: center;
+    }
+    .team-section .section-sub {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 32px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .team-card {
+      background: var(--off-white, #F7F7F5);
+      border-radius: 16px;
+      padding: 36px 28px;
+      text-align: center;
+      border: 1px solid #E0E0E0;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .team-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    }
+    .team-photo {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      border: 4px solid var(--green, #6B8F71);
+      margin-bottom: 20px;
+    }
+    .team-card h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--charcoal, #2C2C2C);
+      margin-bottom: 4px;
+    }
+    .team-card .team-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--green, #6B8F71);
+      margin-bottom: 16px;
+      display: block;
+    }
+    .team-card p {
+      font-size: 0.92rem;
+      color: var(--gray, #5A5A5A);
+      line-height: 1.7;
+    }
+
+    /* ---- IN-HOUSE WELLNESS PROVIDERS ---- */
+    .wellness-section {
+      padding: 80px 24px;
+      background: var(--off-white, #F7F7F5);
+    }
+    .wellness-section .section-label,
+    .wellness-section .section-title,
+    .wellness-section .section-sub {
+      text-align: center;
+    }
+    .wellness-section .section-sub {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .wellness-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .wellness-card {
+      background: var(--white, #FFFFFF);
+      border-radius: 12px;
+      padding: 32px 24px;
+      text-align: center;
+      border: 1px solid #E0E0E0;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .wellness-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.07);
+    }
+    .wellness-icon {
+      width: 56px;
+      height: 56px;
+      background: var(--green, #6B8F71);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 18px;
+      color: #FFFFFF;
+    }
+    .wellness-icon svg {
+      width: 28px;
+      height: 28px;
+    }
+    .wellness-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--charcoal, #2C2C2C);
+      margin-bottom: 6px;
+    }
+    .wellness-card .wellness-type {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--green, #6B8F71);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+      display: block;
+    }
+    .wellness-card p {
+      font-size: 0.92rem;
+      color: var(--gray, #5A5A5A);
+      line-height: 1.6;
+    }
+    /* Alternate wellness icon colors using logo palette */
+    .wellness-card:nth-child(2) .wellness-icon { background: var(--color-amber, #D77C39); }
+    .wellness-card:nth-child(3) .wellness-icon { background: var(--color-crimson, #B42D34); }
+    .wellness-card:nth-child(4) .wellness-icon { background: var(--color-amber, #D77C39); }
+
+    /* ---- CTA BANNER ---- */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--green, #6B8F71) 0%, var(--green-dark, #4A6E50) 100%);
+      padding: 72px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 40px,
+        rgba(255, 255, 255, 0.03) 40px,
+        rgba(255, 255, 255, 0.03) 80px
+      );
+      pointer-events: none;
+    }
+    .cta-banner > * { position: relative; z-index: 1; }
+    .cta-banner h2 {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 12px;
+    }
+    .cta-banner p {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 1.1rem;
+      margin-bottom: 32px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cta-banner .btn-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #FFFFFF;
+      color: var(--green, #6B8F71);
+      padding: 16px 40px;
+      border-radius: 8px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+      transition: all 0.25s;
+      border: none;
+      cursor: pointer;
+    }
+    .cta-banner .btn-white:hover {
+      background: var(--off-white, #F7F7F5);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* ---- RESPONSIVE ---- */
+    @media (max-width: 768px) {
+      .provider-card {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        text-align: center;
+      }
+      .provider-photo-wrap {
+        display: flex;
+        justify-content: center;
+      }
+      .provider-photo {
+        width: 200px;
+        height: 200px;
+      }
+      .provider-info .provider-quote {
+        text-align: left;
+      }
+      .provider-info p {
+        text-align: left;
+      }
+      .page-header {
+        padding: 120px 20px 48px;
+      }
+      .wellness-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media (max-width: 480px) {
+      .wellness-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="mainNav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <img src="https://www.purelightchiro.com/wp-content/uploads/2023/11/cropped-logo@2x-2.png" alt="Pure Light Chiropractic" class="logo-img">
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="new-patients.html">New Patients</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="espanol.html">Espa&ntilde;ol</a></li>
+        <li><a href="tel:5127501512" class="nav-phone">&#9742; (512) 750-1512</a></li>
+        <li><a href="contact.html" class="nav-cta">Book Now</a></li>
+      </ul>
+      <button class="mobile-menu" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <h1 class="fade-in">Meet Your Providers</h1>
+    <p class="fade-in">Our team is dedicated to connecting you with your body's natural healing ability.</p>
+  </section>
+
+  <!-- MISSION STATEMENT -->
+  <section class="mission-section">
+    <div class="container">
+      <blockquote class="fade-in">
+        Our mission is to shift people's paradigm of health by connecting them to their body's innate healing ability through empowerment.
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- DR. LAINE -->
+  <section class="provider-section">
+    <div class="provider-card">
+      <div class="provider-photo-wrap fade-in">
+        <img src="https://www.purelightchiro.com/wp-content/uploads/2020/10/laine-portraits-9-Edit-copy.jpg" alt="Dr. Laine" class="provider-photo">
+      </div>
+      <div class="provider-info fade-in">
+        <h2>Dr. Laine</h2>
+        <span class="provider-title">Founder &amp; Chiropractor</span>
+        <div class="provider-quote">
+          &ldquo;My passion is to empower people by connecting them to their own inner healer.&rdquo;
+        </div>
+        <p>Originally from Louisiana, Dr. Laine followed her passion for holistic health across the country before settling in Austin. She earned her undergraduate degree in Environmental Health from Colorado State University, where she developed a deep appreciation for the connection between our bodies and the natural world.</p>
+        <p>While in Colorado, she completed her certification as a Massage Therapist and Reiki practitioner, building a hands-on foundation that would shape her approach to healing. She then attended Parker College of Chiropractic in Dallas, where she graduated as class salutatorian &mdash; a testament to her dedication and academic excellence.</p>
+        <p>Today, Dr. Laine practices in Austin and continues to prioritize the same self-care she encourages in her patients. Outside the office, you'll find her connecting with nature, practicing meditation, and embracing motherhood &mdash; all of which fuel her ability to show up fully for those she serves.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DR. AGUILAR -->
+  <section class="provider-section">
+    <div class="provider-card">
+      <div class="provider-photo-wrap fade-in">
+        <img src="https://www.purelightchiro.com/wp-content/uploads/2024/03/Mar_22_2024_9_53_21-250x333.jpg" alt="Dr. Aguilar" class="provider-photo">
+      </div>
+      <div class="provider-info fade-in">
+        <h2>Dr. Aguilar</h2>
+        <span class="provider-title">Chiropractor, DC, DACNB</span>
+        <p>Dr. Aguilar brings a diverse professional background and a uniquely compassionate, playful approach to chiropractic care. A certified yoga instructor, he integrates movement and mindfulness into his practice, meeting each patient exactly where they are on their healing journey.</p>
+        <p>Known for his warmth and humor, Dr. Aguilar has a particular gift for connecting with pediatric patients &mdash; making visits feel fun and safe for even the youngest members of the family. While he's quick to bring a smile to the room, his commitment to patient healing is deeply serious and unwavering.</p>
+        <p>A proud father, Dr. Aguilar understands firsthand the importance of family wellness. He is also the practice's Spanish-speaking provider, ensuring that more members of the Austin community can access quality chiropractic care in the language most comfortable to them. <em>Se habla espa&ntilde;ol.</em></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- KRYKIT -->
+  <section class="provider-section">
+    <div class="provider-card">
+      <div class="provider-photo-wrap fade-in">
+        <img src="https://www.purelightchiro.com/wp-content/uploads/2022/08/KRYKIT-e1711055250847-250x291.jpeg" alt="Krykit" class="provider-photo">
+      </div>
+      <div class="provider-info fade-in">
+        <h2>Krykit</h2>
+        <span class="provider-title">Office Manager</span>
+        <p>An avid reader and film enthusiast, Krykit grew up right here in Austin. As Office Manager, she engages daily with patients and practitioners alike, continually learning about community wellness and ensuring the office runs seamlessly. Outside of work, you'll find her playing disc golf, adding to her VHS collection, or catching the latest theatrical releases.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- IN-HOUSE WELLNESS PROVIDERS -->
+  <section class="wellness-section">
+    <div class="container">
+      <div class="section-label fade-in">Collaborative Care</div>
+      <h2 class="section-title fade-in">In-House Wellness Providers</h2>
+      <p class="section-sub fade-in">We've partnered with exceptional practitioners to offer a full spectrum of healing under one roof.</p>
+
+      <div class="wellness-grid">
+        <div class="wellness-card fade-in">
+          <div class="wellness-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20a6 6 0 0 0-12 0"/><circle cx="12" cy="10" r="4"/><circle cx="12" cy="12" r="10"/></svg></div>
+          <h3>Texas Bodywork</h3>
+          <span class="wellness-type">Massage Therapy</span>
+          <p>Danielle Park, LMT</p>
+        </div>
+        <div class="wellness-card fade-in fade-in-delay-1">
+          <div class="wellness-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+          <h3>Beyond the Physical</h3>
+          <span class="wellness-type">Physical Therapy</span>
+          <p>Alicia Poche, PT</p>
+        </div>
+        <div class="wellness-card fade-in fade-in-delay-2">
+          <div class="wellness-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="M4.93 4.93l2.83 2.83"/><path d="M16.24 16.24l2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="M4.93 19.07l2.83-2.83"/><path d="M16.24 7.76l2.83-2.83"/></svg></div>
+          <h3>Galini Massage</h3>
+          <span class="wellness-type">Massage &amp; Reiki</span>
+          <p>Virginie Hauffray</p>
+        </div>
+        <div class="wellness-card fade-in fade-in-delay-3">
+          <div class="wellness-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h3>Pearlescent Skincare</h3>
+          <span class="wellness-type">Skincare</span>
+          <p>Sarah Clark &amp; Monica Mercado</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <h2>Ready to Meet Us in Person?</h2>
+    <p>Schedule your visit and experience the Pure Light difference.</p>
+    <a href="contact.html" class="btn btn-white">Book an Appointment</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <a href="index.html" class="footer-logo">
+          <img src="https://www.purelightchiro.com/wp-content/uploads/2023/11/cropped-logo@2x-2.png" alt="Pure Light Chiropractic" style="height: 40px; opacity: 0.85;">
+        </a>
+        <p>&copy; 2026 Pure Light Chiropractic &bull; Austin, TX &bull; <a href="tel:5127501512">(512) 750-1512</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- STICKY MOBILE CTA -->
+  <div class="mobile-cta">
+    <a href="tel:5127501512">
+      <span class="pulse-dot"></span>
+      &#9742; Call Now &mdash; (512) 750-1512
+    </a>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Nav background solidifies on scroll
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 50);
+    }, { passive: true });
+
+    // Scroll fade-in via IntersectionObserver
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Close mobile menu when a link is tapped
+    document.querySelectorAll('#navLinks a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('navLinks').classList.remove('open');
+      });
+    });
+  </script>
+
+</body>
+</html>

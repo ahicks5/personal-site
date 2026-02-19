@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Patients | Pure Light Chiropractic &mdash; Austin, TX</title>
+  <meta name="description" content="New patient information for Pure Light Chiropractic in Austin, TX. Learn what to expect at your first visit, pricing, payment options, and chiropractic techniques. Call (512) 750-1512.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ---- PAGE HEADER (inner pages) ---- */
+    .page-header {
+      background: var(--color-sage-light, #EDF2ED);
+      padding: 140px 24px 60px;
+      text-align: center;
+    }
+    .page-header h1 {
+      font-size: clamp(2rem, 4.5vw, 3rem);
+      font-weight: 800;
+      color: var(--color-charcoal, #2D2D2D);
+      margin-bottom: 12px;
+    }
+    .page-header p {
+      font-size: 1.1rem;
+      color: var(--color-gray, #6B6B6B);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* ---- PRICING CARDS ---- */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .pricing-card {
+      background: var(--color-white, #FFFFFF);
+      border: 1px solid var(--color-border, #E0DDD8);
+      border-radius: 12px;
+      padding: 40px 32px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .pricing-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    }
+    .pricing-icon {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 12px;
+      color: var(--color-sage, #5B8C5A);
+    }
+    .pricing-icon svg {
+      width: 100%;
+      height: 100%;
+    }
+    /* Second pricing card uses amber */
+    .pricing-card:nth-child(2) .pricing-icon { color: var(--color-amber, #D77C39); }
+    .pricing-card:nth-child(2) .pricing-amount { color: var(--color-amber, #D77C39); }
+    .pricing-card h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--color-charcoal, #2D2D2D);
+      margin-bottom: 8px;
+    }
+    .pricing-amount {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--color-sage, #5B8C5A);
+      margin-bottom: 8px;
+    }
+    .pricing-card p {
+      font-size: 0.92rem;
+      color: var(--color-gray, #6B6B6B);
+      line-height: 1.7;
+    }
+
+    /* ---- PAYMENT INFO GRID ---- */
+    .payment-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 28px;
+      max-width: 900px;
+    }
+    .payment-card {
+      background: var(--color-white, #FFFFFF);
+      border: 1px solid var(--color-border, #E0DDD8);
+      border-radius: 12px;
+      padding: 32px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .payment-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    }
+    .payment-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--color-charcoal, #2D2D2D);
+      margin-bottom: 14px;
+    }
+    .payment-card p {
+      font-size: 0.95rem;
+      color: var(--color-gray, #6B6B6B);
+      line-height: 1.7;
+    }
+    .payment-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .payment-list li {
+      position: relative;
+      padding: 8px 0 8px 28px;
+      font-size: 0.95rem;
+      color: var(--color-gray, #6B6B6B);
+      border-bottom: 1px solid var(--color-border, #E0DDD8);
+    }
+    .payment-list li:last-child {
+      border-bottom: none;
+    }
+    .payment-list li::before {
+      content: '\2713';
+      position: absolute;
+      left: 0;
+      color: var(--color-sage, #5B8C5A);
+      font-weight: 700;
+    }
+
+    /* ---- CTA BANNER ---- */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--color-sage, #5B8C5A) 0%, var(--color-sage-dark, #3D6B3D) 100%);
+      padding: 72px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 40px,
+        rgba(255, 255, 255, 0.03) 40px,
+        rgba(255, 255, 255, 0.03) 80px
+      );
+      pointer-events: none;
+    }
+    .cta-banner > * { position: relative; z-index: 1; }
+    .cta-banner h2 {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 12px;
+    }
+    .cta-banner p {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 1.1rem;
+      margin-bottom: 32px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cta-btns {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .cta-banner .btn-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #FFFFFF;
+      color: var(--color-sage, #5B8C5A);
+      padding: 16px 40px;
+      border-radius: 9999px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+      transition: all 0.25s;
+      border: none;
+      cursor: pointer;
+    }
+    .cta-banner .btn-white:hover {
+      background: var(--color-offwhite, #FAF8F5);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+    .cta-banner .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: #FFFFFF;
+      padding: 16px 40px;
+      border-radius: 9999px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-decoration: none;
+      border: 2px solid rgba(255, 255, 255, 0.6);
+      transition: all 0.25s;
+      cursor: pointer;
+    }
+    .cta-banner .btn-outline:hover {
+      border-color: #FFFFFF;
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
+    }
+
+    /* ---- TECHNIQUES CARD ---- */
+    .techniques-card {
+      background: var(--color-white, #FFFFFF);
+      border: 1px solid var(--color-border, #E0DDD8);
+      border-radius: 12px;
+      padding: 40px;
+      max-width: 800px;
+      border-left: 4px solid var(--color-amber, #D77C39);
+    }
+    .techniques-card p {
+      font-size: 1.05rem;
+      color: var(--color-gray, #6B6B6B);
+      line-height: 1.8;
+    }
+
+    /* ---- RESPONSIVE ---- */
+    @media (max-width: 768px) {
+      .page-header {
+        padding: 120px 20px 48px;
+      }
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+      .payment-grid {
+        grid-template-columns: 1fr;
+      }
+      .cta-btns {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV ACCENT BAR -->
+  <div class="nav-accent"></div>
+
+  <!-- NAV -->
+  <nav id="mainNav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <img src="https://www.purelightchiro.com/wp-content/uploads/2023/11/cropped-logo@2x-2.png" alt="Pure Light Chiropractic" class="logo-img">
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="new-patients.html" class="active">New Patients</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="espanol.html">Espa&ntilde;ol</a></li>
+        <li><a href="tel:5127501512" class="nav-phone">&#9742; (512) 750-1512</a></li>
+        <li><a href="contact.html" class="nav-cta">Book Now</a></li>
+      </ul>
+      <button class="mobile-menu" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <h1 class="fade-in">Your First Visit</h1>
+    <p class="fade-in">Here's what to expect when you visit Pure Light Chiropractic.</p>
+  </section>
+
+  <!-- WHAT TO EXPECT: 3-Step Process -->
+  <section style="padding: 80px 24px; background: var(--color-white, #FFFFFF);">
+    <div class="container">
+      <span class="section-label fade-in">Getting Started</span>
+      <h2 class="section-title fade-in">What to Expect</h2>
+      <p class="section-subtitle fade-in">Your first visit is simple, thorough, and designed around you.</p>
+
+      <div class="steps fade-in-group">
+        <div class="step-item fade-in">
+          <h3>Arrive &amp; Check In</h3>
+          <p>Complete your patient paperwork via the online portal beforehand, or arrive 15 minutes early to fill it out in the office.</p>
+        </div>
+        <div class="step-item fade-in">
+          <h3>Consultation &amp; Assessment</h3>
+          <p>Your doctor will perform a thorough consultation and neuro-spinal assessment to understand your unique needs and health history.</p>
+        </div>
+        <div class="step-item fade-in">
+          <h3>Your First Adjustment</h3>
+          <p>Unless there are indications otherwise, you'll receive your first chiropractic adjustment. Your visit will last approximately 30&ndash;45 minutes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section style="padding: 80px 24px; background: var(--color-offwhite, #FAF8F5);">
+    <div class="container">
+      <span class="section-label fade-in" style="text-align: center; display: block;">Investment</span>
+      <h2 class="section-title fade-in" style="text-align: center;">First Visit Pricing</h2>
+      <p class="section-subtitle fade-in" style="text-align: center; margin-left: auto; margin-right: auto;">Transparent pricing with no hidden fees.</p>
+
+      <div class="pricing-grid">
+        <div class="pricing-card fade-in">
+          <div class="pricing-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+          <h3>Adults</h3>
+          <div class="pricing-amount">$120</div>
+          <p>First visit &mdash; includes consultation, neuro-spinal assessment, and your first adjustment.</p>
+        </div>
+        <div class="pricing-card fade-in">
+          <div class="pricing-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="4" r="2"/><path d="M12 6v4"/><path d="M9 18l3-8 3 8"/><path d="M8 22l2-4"/><path d="M16 22l-2-4"/></svg></div>
+          <h3>Children</h3>
+          <div class="pricing-amount">$100</div>
+          <p>First visit &mdash; includes a gentle consultation, assessment, and age-appropriate adjustment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAYMENT INFORMATION -->
+  <section style="padding: 80px 24px; background: var(--color-white, #FFFFFF);">
+    <div class="container">
+      <span class="section-label fade-in">Payment</span>
+      <h2 class="section-title fade-in">Payment Information</h2>
+      <p class="section-subtitle fade-in">We keep things simple so we can focus on your care.</p>
+
+      <div class="payment-grid">
+        <div class="payment-card fade-in">
+          <h3>Accepted Payment Methods</h3>
+          <ul class="payment-list">
+            <li>Cash</li>
+            <li>Check</li>
+            <li>Debit &amp; credit cards</li>
+            <li>HSA / FSA cards</li>
+          </ul>
+        </div>
+        <div class="payment-card fade-in">
+          <h3>Insurance Policy</h3>
+          <p>We do <strong>not</strong> accept insurance directly. Instead, we provide detailed invoices so you can file claims with your insurance company independently.</p>
+          <p style="margin-top: 12px;">This approach allows us to focus fully on your care without third-party negotiations &mdash; so every decision is made between you and your doctor.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECHNIQUES -->
+  <section style="padding: 80px 24px; background: var(--color-offwhite, #FAF8F5);">
+    <div class="container">
+      <span class="section-label fade-in">Our Approach</span>
+      <h2 class="section-title fade-in">Techniques</h2>
+      <p class="section-subtitle fade-in">Personalized care that fits your comfort level.</p>
+
+      <div class="techniques-card fade-in">
+        <p>Our staff works with you to find the best approach for your body. We offer everything from <strong>traditional manual adjustments</strong> to <strong>low-force, gentle techniques</strong> &mdash; and we customize combinations based on your individual needs, comfort level, and health goals. No two patients are the same, and neither are our treatment plans.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <h2>Ready to Book Your First Visit?</h2>
+    <p>Take the first step toward better health. Call us today or book online.</p>
+    <div class="cta-btns">
+      <a href="tel:5127501512" class="btn-white">&#9742; Call (512) 750-1512</a>
+      <a href="contact.html" class="btn-outline">Book Online</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <a href="index.html" class="footer-logo">
+          <img src="https://www.purelightchiro.com/wp-content/uploads/2023/11/cropped-logo@2x-2.png" alt="Pure Light Chiropractic" style="height: 40px; opacity: 0.85;">
+        </a>
+        <p>&copy; 2026 Pure Light Chiropractic &bull; 1711 Fortview Rd, Austin, TX 78704 &bull; <a href="tel:5127501512">(512) 750-1512</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- STICKY MOBILE CTA -->
+  <div class="mobile-cta">
+    <a href="tel:5127501512">
+      <span class="pulse-dot"></span>
+      &#9742; Call Now &mdash; (512) 750-1512
+    </a>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Nav background solidifies on scroll
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 50);
+    }, { passive: true });
+
+    // Scroll fade-in via IntersectionObserver
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Close mobile menu when a link is tapped
+    document.querySelectorAll('#navLinks a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('navLinks').classList.remove('open');
+      });
+    });
+  </script>
+
+</body>
+</html>
